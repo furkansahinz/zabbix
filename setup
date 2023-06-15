@@ -1,16 +1,4 @@
-sudo apt update
-sudo apt upgrade
-
-sudo apt install apache2 mysql-server php libapache2-mod-php php-mysql php-ldap php-bcmath php-mbstring php-gd php-xml php-xmlwriter php-xmlreader php-soap php-bz2 php-curl php-zip snmp
-
-sudo mysql -u root -p
-
-veri tabaanı oluşturma
-CREATE DATABASE zabbix character set utf8 collate utf8_bin;
-
-CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'zabbix_password';
-GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'localhost';
-FLUSH PRIVILEGES;
+https://azdigi.com/blog/en/linux-server-en/tools-en/how-to-install-zabbix-6-0-on-ubuntu-20-04/
 -------------------------------------------------------------------------------
 
 wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
