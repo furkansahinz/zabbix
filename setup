@@ -12,9 +12,11 @@ CREATE USER 'zabbix'@'localhost' IDENTIFIED BY 'zabbix_password';
 GRANT ALL PRIVILEGES ON zabbix.* TO 'zabbix'@'localhost';
 FLUSH PRIVILEGES;
 
-wget https://repo.zabbix.com/zabbix-official-repo.key
-sudo apt-key add zabbix-official-repo.key
-sudo wget https://repo.zabbix.com/zabbix/5.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.4-1+$(lsb_release -sc)_all.deb
+
+sudo wget https://repo.zabbix.com/zabbix/5.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.4-1+focal_all.deb
+sudo dpkg -i zabbix-release_5.4-1+focal_all.deb
+
+
 sudo dpkg -i zabbix-release_5.4-1+$(lsb_release -sc)_all.deb
 sudo apt update
 
